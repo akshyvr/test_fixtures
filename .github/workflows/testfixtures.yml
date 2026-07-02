@@ -23,37 +23,37 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Setup Python
+      - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.13'
+          python-version: "3.13"
 
       - name: Create Virtual Environment
         run: |
           python -m venv .venv
 
       - name: Install Dependencies
-        shell: cmd
         run: |
-          call .venv\Scripts\activate
+          source .venv/bin/activate
           python -m pip install --upgrade pip
-          python -m pip install -r requirements.txt
-          python -m playwright install
+          pip install -r requirements.txt
 
-      - name: Run Playwright Tests
-        shell: cmd
+      - name: Install Playwright Browsers
         run: |
-          call .venv\Scripts\activate
+          source .venv/bin/activate
+          python -m playwright install --with-deps
 
-          if exist reports (
-            rmdir /s /q reports
-          )
+      - name: Create Reports Folder
+        run: mkdir -p reports
 
-          python -m pytest tests --browser ${{ matrix.browser }} --html=reports\report.html
+      - name: Run Tests
+        run: |
+          source .venv/bin/activate
+          pytest tests --browser ${{ matrix.browser }} --html=reports/report.html
 
-      - name: Upload HTML Report
+      - name: Upload Report
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: Playwright-Report-${{ matrix.browser }}
-          path: reports
+          name: Test-Report-${{ matrix.browser }}
+          path: reports/
