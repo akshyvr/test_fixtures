@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="91158f3d-1258-4f14-bc2c-0529ab77e966" name="Changes" comment="" />
+    <list default="true" id="91158f3d-1258-4f14-bc2c-0529ab77e966" name="Changes" comment="">
+      <change beforePath="D:/fixtures/test_fictures/.idea/workspace.xml" beforeDir="false" afterPath="D:/fixtures/test_fictures/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="D:/fixtures/test_fictures/requirements" beforeDir="false" afterPath="D:/fixtures/test_fictures/requirements.txt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,9 +23,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="D:/fixtures/test_fictures" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="3EfgpqP2FfgOFLVvE8eH4lZxDeP" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -33,121 +36,26 @@
     "Python tests.Python tests for test_base_file.test_e2e.executor": "Run",
     "Python tests.Python tests for test_base_file.test_flight_page_functionals.executor": "Run",
     "Python tests.Python tests for test_base_file.test_flite_booking_page.executor": "Run",
+    "Python tests.Python tests for test_base_file.test_topdeals_page_functionals_e2e.executor": "Run",
     "Python tests.Python tests for test_base_file.testflite_page_functionals.executor": "Run",
     "Python tests.Python tests for test_base_file.testflite_page_functionals_e2e.executor": "Run",
     "Python tests.Python tests for test_fixtures.Test_first.test_actual.executor": "Run",
     "Python tests.Python tests for test_fixtures.Test_first.test_static.executor": "Run",
     "Python tests.Python tests for test_fixtures.Test_first.test_url.executor": "Run",
     "Python tests.Python tests in test_fixtures.py.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+    "Python tests.Python tests in tests.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "D:/fixtures/test_fictures/tests"
   }
 }]]></component>
-  <component name="RunManager" selected="Python tests.Python tests for test_base_file.testflite_page_functionals_e2e">
-    <configuration name="Python tests for test_base_file.test_e2e" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="test_fictures" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="D:/fixtures/test_fictures" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_base_file.test_e2e&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Python tests for test_base_file.test_flight_page_functionals" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="test_fictures" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="D:/fixtures/test_fictures" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_base_file.test_flight_page_functionals&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Python tests for test_base_file.test_flite_booking_page" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="test_fictures" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="D:/fixtures/test_fictures" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;-v -s&quot;" />
-      <option name="_new_target" value="&quot;test_base_file.test_flite_booking_page&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Python tests for test_base_file.testflite_page_functionals" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="test_fictures" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="D:/fixtures/test_fictures" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;-v -s&quot;" />
-      <option name="_new_target" value="&quot;test_base_file.testflite_page_functionals&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Python tests for test_base_file.testflite_page_functionals_e2e" type="tests" factoryName="Autodetect" nameIsGenerated="true">
-      <module name="test_fictures" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="D:/fixtures/test_fictures" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;-v -s&quot;" />
-      <option name="_new_target" value="&quot;test_base_file.testflite_page_functionals_e2e&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Python tests for test_fixtures.Test_first.test_actual" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="test_fictures" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="D:/fixtures/test_fictures" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_fixtures.Test_first.test_actual&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Python tests for test_fixtures.Test_first.test_static" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
-      <module name="test_fictures" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="D:/fixtures/test_fictures" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_fixtures.Test_first.test_static&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\fixtures\test_fictures" />
+      <recent name="D:\fixtures\test_fictures\tests" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python tests.Python tests in tests">
     <configuration name="Python tests for test_green_kart" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="test_fictures" />
       <option name="ENV_FILES" value="" />
@@ -163,7 +71,7 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_green_kart" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for tests.test_base_file" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="test_fictures" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -174,11 +82,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_green_kart&quot;" />
+      <option name="_new_target" value="&quot;tests.test_base_file&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_green_kart" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for tests.test_base_file.test_e2e" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="test_fictures" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -189,17 +97,85 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_green_kart&quot;" />
+      <option name="_new_target" value="&quot;tests.test_base_file.test_e2e&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="Python tests for tests.test_base_file.test_flite_booking_page" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="test_fictures" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="D:/fixtures/test_fictures" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;-v -s&quot;" />
+      <option name="_new_target" value="&quot;tests.test_base_file.test_flite_booking_page&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for tests.test_base_file.testflite_page_functionals" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="test_fictures" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="D:/fixtures/test_fictures" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;-v -s&quot;" />
+      <option name="_new_target" value="&quot;tests.test_base_file.testflite_page_functionals&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for tests.test_base_file.testflite_page_functionals_e2e" type="tests" factoryName="Autodetect" nameIsGenerated="true">
+      <module name="test_fictures" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="D:/fixtures/test_fictures" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;-v -s&quot;" />
+      <option name="_new_target" value="&quot;tests.test_base_file.testflite_page_functionals_e2e&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests in tests" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="test_fictures" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="D:/fixtures/test_fictures/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;-v -s&quot;" />
+      <option name="_new_target" value="&quot;D:\\fixtures\\test_fictures\\tests&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python tests.Python tests for tests.test_base_file.testflite_page_functionals_e2e" />
+      <item itemvalue="Python tests.Python tests in tests" />
+      <item itemvalue="Python tests.Python tests for tests.test_base_file" />
+      <item itemvalue="Python tests.Python tests for tests.test_base_file.test_e2e" />
+      <item itemvalue="Python tests.Python tests for tests.test_base_file.test_flite_booking_page" />
+      <item itemvalue="Python tests.Python tests for tests.test_base_file.testflite_page_functionals" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Python tests for test_base_file.testflite_page_functionals" />
-        <item itemvalue="Python tests.Python tests for test_base_file.test_flight_page_functionals" />
-        <item itemvalue="Python tests.Python tests for test_base_file.test_flite_booking_page" />
-        <item itemvalue="Python tests.Python tests for test_base_file.test_e2e" />
-        <item itemvalue="Python tests.Python tests for test_green_kart" />
+        <item itemvalue="Python tests.Python tests in tests" />
+        <item itemvalue="Python tests.Python tests for tests.test_base_file.testflite_page_functionals" />
+        <item itemvalue="Python tests.Python tests for tests.test_base_file" />
+        <item itemvalue="Python tests.Python tests for tests.test_base_file.test_flite_booking_page" />
+        <item itemvalue="Python tests.Python tests for tests.test_base_file.test_e2e" />
       </list>
     </recent_temporary>
   </component>
