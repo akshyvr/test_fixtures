@@ -1,10 +1,11 @@
+import random
 import time
-
+import re
 import pytest
 from playwright.sync_api import expect
 
 from test_green_kart import Products_page
-
+testdata_for_search = ["banana", "strawberry", "potato", "cherry"]
 def test_e2e(page):
     products_page = Products_page(page)
 
@@ -58,6 +59,24 @@ def testflite_page_functionals_e2e(page, context):
         if discount.nth(i).text_content().strip() == 'Senior Citizen':
             discount.nth(i).click(force=True)
     time.sleep(5)
+
+def test_topdeals_page_functionals(page, context):
+    page.goto("https://rahulshettyacademy.com/seleniumPractise/#/")
+    with context.expect_page() as new_page:
+        page.get_by_text("Top Deals").click()
+    top_deals = new_page.value
+    top_deals.wait_for_load_state()
+    expect(top_deals).to_have_title("GreenKart - veg and fruits kart")
+    return  top_deals
+
+def test_topdeals_page_functionals_e2e(page, context):
+    search_product = random.choice(testdata_for_search)
+    top_deals_page = test_topdeals_page_functionals(page, context)
+    top_deals_page.get_by_label("Search:").type(search_product)
+    expect(top_deals_page.locator("(//tr/td[1])[1]")).to_contain_text(search_product.capitalize())
+    print(f"price of an {top_deals_page.locator("(//tr/td[1])[1]").text_content()} is"
+          f" {top_deals_page.locator("(//tr/td[2])[1]").text_content()} and dicsount price"
+          f" is {top_deals_page.locator("(//tr/td[3])[1]").text_content()}")
 
 
 
