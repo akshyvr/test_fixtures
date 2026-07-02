@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="91158f3d-1258-4f14-bc2c-0529ab77e966" name="Changes" comment="updated with github file and requiremenst.txt">
       <change beforePath="D:/fixtures/test_fictures/.idea/workspace.xml" beforeDir="false" afterPath="D:/fixtures/test_fictures/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="D:/fixtures/test_fictures/tests/pytest.ini" beforeDir="false" afterPath="D:/fixtures/test_fictures/tests/pytest.ini" afterDir="false" />
+      <change beforePath="D:/fixtures/test_fictures/tests/conftest.py" beforeDir="false" afterPath="D:/fixtures/test_fictures/tests/conftest.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
