@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="91158f3d-1258-4f14-bc2c-0529ab77e966" name="Changes" comment="">
+    <list default="true" id="91158f3d-1258-4f14-bc2c-0529ab77e966" name="Changes" comment="updated with github file and requiremenst.txt">
       <change beforePath="D:/fixtures/test_fictures/.idea/workspace.xml" beforeDir="false" afterPath="D:/fixtures/test_fictures/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="D:/fixtures/test_fictures/requirements" beforeDir="false" afterPath="D:/fixtures/test_fictures/requirements.txt" afterDir="false" />
+      <change beforePath="D:/fixtures/test_fictures/tests/pytest.ini" beforeDir="false" afterPath="D:/fixtures/test_fictures/tests/pytest.ini" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +23,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="D:/fixtures/test_fictures" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "akshyvr"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/akshyvr/test_fixtures.git",
+    "accountId": "05ea69b1-917b-4b56-b743-34832ca96318"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
@@ -195,6 +207,19 @@
       <option name="presentableId" value="Default" />
       <updated>1780575226748</updated>
     </task>
+    <task id="LOCAL-00001" summary="updated with github file and requiremenst.txt">
+      <option name="closed" value="true" />
+      <created>1783011603394</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1783011603395</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="updated with github file and requiremenst.txt" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated with github file and requiremenst.txt" />
   </component>
 </project>
