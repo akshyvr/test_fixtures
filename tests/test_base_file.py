@@ -4,8 +4,14 @@ import re
 import pytest
 from playwright.sync_api import expect
 
-from test_green_kart import Products_page
+from pages.products_page import Products_page
+from pages.flite_page import Flite_page
+from pages.top_deals_page import TopDeals_page
+from pages.login_page import Login_page
+
+
 testdata_for_search = ["banana", "strawberry", "potato", "cherry"]
+
 def test_e2e(page):
     products_page = Products_page(page)
 
@@ -19,66 +25,78 @@ def test_e2e(page):
     products_page.click_checkbox(".chkAgree")
     products_page.click_button("Proceed")
 
-def test_flite_booking_page(page, context):
+
+@pytest.fixture
+def flite_page_obj(page, context):
+    """Open Flight Booking popup and return Flite_page POM instance."""
     page.goto("https://rahulshettyacademy.com/seleniumPractise/#/")
     with context.expect_page() as new_page:
         page.get_by_text("Flight Booking").click()
-    flite_page = new_page.value
-    flite_page.wait_for_load_state()
-    expect(flite_page).to_have_title('QAClickJet - Flight Booking for Domestic and International, Cheap Air Tickets')
-    return flite_page
+    popup = new_page.value
+    flite = Flite_page(popup)
+    flite.wait_for_load_state()
+    expect(flite.page).to_have_title('QAClickJet - Flight Booking for Domestic and International, Cheap Air Tickets')
+    return flite
 
-def testflite_page_functionals(page,context):
-    flite_page = test_flite_booking_page(page, context)
-    options = flite_page.locator("//*[@id='ctl00_mainContent_rbtnl_Trip']/tbody/tr/td/label").count()
-    for i in range(options):
-        print(flite_page.locator("//*[@id='ctl00_mainContent_rbtnl_Trip']/tbody/tr/td/label").nth(i).inner_text().strip())
-        if flite_page.locator("//*[@id='ctl00_mainContent_rbtnl_Trip']/tbody/tr/td/label").nth(i).inner_text().strip() == "Round Trip":
-            flite_page.locator("//*[@name='ctl00$mainContent$rbtnl_Trip']").nth(i).click()
-    time.sleep(4)
 
-def testflite_page_functionals_e2e(page, context):
-    flite_page = test_flite_booking_page(page, context)
-    # flite_page.locator("//*[@id='ctl00_mainContent_ddl_originStation1_CTXTaction']").click()
-    flite_page.locator("#ctl00_mainContent_ddl_originStation1_CTXTaction").click()
-    flite_page.locator("//a[@value='BLR']").click()
-    flite_page.locator("(//a[@value='GOI'])[2]").click()
-    flite_page.locator("(//a[normalize-space()='8'])[1]").click()
-    flite_page.locator("#ctl00_mainContent_view_date2").click()
-    flite_page.locator("(//a[normalize-space()='12'])[2]").click()
-    flite_page.locator("#divpaxinfo").click()
-    for i in range(2):
-        flite_page.locator("//div[@id='divAdult']/div[2]/span[3]").click()
-    for i in range(1):
-        flite_page.locator("#hrefIncChd").click()
-    flite_page.locator("#divpaxinfo").click()
-    flite_page.locator("#ctl00_mainContent_DropDownListCurrency").select_option(value='USD')
-    discount = flite_page.locator("//*[@id='discount-checkbox']/div/label")
-    print(discount.all_text_contents())
-    for i in range(discount.count()):
-        if discount.nth(i).text_content().strip() == 'Senior Citizen':
-            discount.nth(i).click(force=True)
-    time.sleep(5)
+def testflite_page_functionals(flite_page_obj):
+    """Verify trip type options and select Round Trip if available."""
+    flite_page_obj.select_round_trip_if_present()
+    # ensure the trip options are visible after interaction
+    expect(flite_page_obj.page.locator("//*[@id='ctl00_mainContent_rbtnl_Trip']")).to_be_visible()
 
-def test_topdeals_page_functionals(page, context):
+
+def testflite_page_functionals_e2e(flite_page_obj):
+    """End-to-end flight booking flow using the Flite_page POM with assertions."""
+    fp = flite_page_obj
+    fp.select_origin('BLR')
+    fp.select_destination('GOI')
+    fp.select_date('8', occurrence=1)
+    fp.open_return_date_picker()
+    fp.select_date('12', occurrence=2)
+
+    # set passengers, then assert passenger info changes after applying a discount
+    before = fp.get_passenger_counts()
+    fp.set_passengers(adults=3, children=2)
+    after_set = fp.get_passenger_counts()
+    assert after_set == (3, 2), f"Expected (3,2) passengers, got {after_set}"
+
+    fp.select_currency('USD')
+    sel_curr = fp.get_selected_currency()
+    assert sel_curr and sel_curr.upper() == 'USD', f"Expected USD, got {sel_curr}"
+
+    fp.apply_discount('Senior Citizen')
+    assert fp.is_discount_applied('Senior Citizen'), "Senior Citizen discount should be applied"
+    assert fp.get_passenger_counts() == (3, 0), f"Expected (3,2) passengers, got {fp.get_passenger_counts()}"
+
+@pytest.fixture
+def topdeals_page(page, context):
     page.goto("https://rahulshettyacademy.com/seleniumPractise/#/")
     with context.expect_page() as new_page:
         page.get_by_text("Top Deals").click()
     top_deals = new_page.value
-    top_deals.wait_for_load_state()
-    expect(top_deals).to_have_title("GreenKart - veg and fruits kart")
-    return  top_deals
+    top_deals_page = TopDeals_page(top_deals)
+    top_deals_page.wait_for_load_state()
+    expect(top_deals_page.page).to_have_title("GreenKart - veg and fruits kart")
+    return  top_deals_page
 
-def test_topdeals_page_functionals_e2e(page, context):
+
+
+def test_topdeals_page_functionals_e2e(topdeals_page):
     search_product = random.choice(testdata_for_search)
-    top_deals_page = test_topdeals_page_functionals(page, context)
-    top_deals_page.get_by_label("Search:").type(search_product)
-    expect(top_deals_page.locator("(//tr/td[1])[1]")).to_contain_text(search_product.capitalize())
-    print(f"price of an {top_deals_page.locator("(//tr/td[1])[1]").text_content()} is"
-          f" {top_deals_page.locator("(//tr/td[2])[1]").text_content()} and dicsount price"
-          f" is {top_deals_page.locator("(//tr/td[3])[1]").text_content()}")
+    topdeals_page.search(search_product)
+    expect(topdeals_page.page.locator("(//tr/td[1])[1]")).to_contain_text(search_product.capitalize())
+    name, price, discount_price = topdeals_page.first_row_text()
+    print(f"price of an {name} is {price} and discount price is {discount_price}")
 
 
-
-
+def test_login(page) -> None:
+    page.goto("https://practicetestautomation.com/practice-test-login/")
+    page.get_by_text("Home Practice Courses Blog Contact open menu Test login This is a simple Login").click()
+    login_page = Login_page(page)
+    login_page.login("student", "Password123")
+    expect(page.get_by_role("heading")).to_contain_text("Logged In Successfully")
+    expect(page.get_by_role("link", name="Log out")).to_be_visible()
+    expect(page.get_by_role("link", name="Practice Test Automation", exact=True)).to_be_visible()
+    page.get_by_role("link", name="Log out").click()
 

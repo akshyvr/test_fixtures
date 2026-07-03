@@ -7,38 +7,23 @@ class Products_page:
     def __init__(self, page: Page):
         self.page = page
 
-
     def select_vegetable(self, name: str, quantity: int):
-
         vegetables = self.page.locator(self.vegetable_name_locator)
-
         for i in range(vegetables.count()):
-
             vegetable_name = vegetables.nth(i).text_content().split("-")[0].strip()
-
             if vegetable_name == name:
-
-                quantity_input = self.page.locator(
-                    f"(//input[@type='number'])[{i+1}]"
-                )
-
+                quantity_input = self.page.locator(f"(//input[@type='number'])[{i+1}]")
                 current_quantity = int(quantity_input.input_value())
-
                 while current_quantity < quantity:
-                    self.page.locator(
-                        f"(//a[contains(@class,'increment')])[{i+1}]"
-                    ).click()
+                    self.page.locator(f"(//a[contains(@class,'increment')])[{i+1}]").click()
                     current_quantity += 1
-
-                self.page.locator(
-                    f"(//button[contains(text(),'ADD TO CART')])[{i+1}]"
-                ).click()
-
+                self.page.locator(f"(//button[contains(text(),'ADD TO CART')])[{i+1}]").click()
                 break
 
     def select_vegetables(self, products: dict):
         for vegetable_name, quantity in products.items():
             self.select_vegetable(vegetable_name, quantity)
+
     def goto_cart(self):
         self.page.get_by_alt_text("Cart").click()
 
