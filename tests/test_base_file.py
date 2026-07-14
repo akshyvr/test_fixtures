@@ -92,7 +92,6 @@ def test_topdeals_page_functionals_e2e(topdeals_page):
 
 def test_login(page) -> None:
     page.goto("https://practicetestautomation.com/practice-test-login/")
-    page.get_by_text("Home Practice Courses Blog Contact open menu Test login This is a simple Login").click()
     login_page = Login_page(page)
     login_page.login("student", "Password123")
     expect(page.get_by_role("heading")).to_contain_text("Logged In Successfully")
