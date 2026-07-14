@@ -100,3 +100,14 @@ def test_login(page) -> None:
     expect(page.get_by_role("link", name="Practice Test Automation", exact=True)).to_be_visible()
     page.get_by_role("link", name="Log out").click()
 
+def test_login_by_extract(page) -> None:
+    page.goto("https://practicetestautomation.com/practice-test-login/")
+    credentials = [page.locator("(//*[@id='login']/ul/li[2]/b)[1]").text_content(),
+                   page.locator("(//*[@id='login']/ul/li[2]/b)[2]").text_content()]
+    login_page = Login_page(page)
+    login_page.login(credentials[0], credentials[1])
+    expect(page.get_by_role("heading")).to_contain_text("Logged In Successfully")
+    expect(page.get_by_role("link", name="Log out")).to_be_visible()
+    expect(page.get_by_role("link", name="Practice Test Automation", exact=True)).to_be_visible()
+    page.get_by_role("link", name="Log out").click()
+
